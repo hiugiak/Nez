@@ -1,4 +1,4 @@
-<Project>	
+<Project>
 	<PropertyGroup>
 		<BaseIntermediateOutputPath>obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
 	</PropertyGroup>
@@ -12,6 +12,7 @@
 		<AssemblyName>Nez</AssemblyName>
 		<TargetFramework>net8.0</TargetFramework>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 		<IntermediateOutputPath>obj\Nez.FNA\$(Configuration)</IntermediateOutputPath>
@@ -26,9 +27,9 @@
 		<DefineConstants>FNA;FNA_GCHANDLE</DefineConstants>
 	</PropertyGroup>
 
-    <ItemGroup>
-      	<Compile Remove="Graphics\SVG\Shapes\Paths\SvgPathBuilder.cs" />
-    </ItemGroup>
+	<ItemGroup>
+		<Compile Remove="Graphics\SVG\Shapes\Paths\SvgPathBuilder.cs" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<EmbeddedResource Include="Content\NezDefaultBMFont.xnb">
@@ -40,10 +41,10 @@
 		<ProjectReference Include="..\..\FNA\FNA.Core.csproj">
 		</ProjectReference>
 	</ItemGroup>
-	
+
 	<ItemGroup>
 		<PackageReference Include="System.Drawing.Common" Version="8.0.5" />
 	</ItemGroup>
-	
+
 	<Import Sdk="Microsoft.NET.Sdk" Project="Sdk.targets" />
 </Project>
